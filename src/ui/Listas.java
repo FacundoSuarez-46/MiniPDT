@@ -74,10 +74,12 @@ public class Listas extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tablaPersonas = new javax.swing.JTable();
+        jButton5 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         tablaRoles = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -91,7 +93,7 @@ public class Listas extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Poppins SemiBold", 0, 18)); // NOI18N
         jLabel1.setText("Lista de personas");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, 20));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, 20));
 
         tablaPersonas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -106,7 +108,15 @@ public class Listas extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(tablaPersonas);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 690, 340));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 690, 340));
+
+        jButton5.setText("Volver");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
         jScrollPane1.setViewportView(jPanel1);
 
@@ -128,11 +138,19 @@ public class Listas extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(tablaRoles);
 
-        jPanel2.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 690, 340));
+        jPanel2.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 690, 340));
 
         jLabel3.setFont(new java.awt.Font("Poppins SemiBold", 0, 18)); // NOI18N
         jLabel3.setText("Lista de roles");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, 20));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, 20));
+
+        jButton4.setText("Volver");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
         jTabbedPane1.addTab("Roles", jPanel2);
 
@@ -140,6 +158,16 @@ public class Listas extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        this.dispose();
+        Menu menu = new Menu();
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        this.dispose();
+        Menu menu = new Menu();
+    }//GEN-LAST:event_jButton5MouseClicked
 
     /**
      * @param args the command line arguments
@@ -177,6 +205,8 @@ public class Listas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
