@@ -232,6 +232,15 @@ public class Altas extends javax.swing.JFrame {
                 pst.setInt(9, idRol);
 
                 pst.executeUpdate();
+                
+                inptApellido.setText("");
+                inptApellido2.setText("");
+                inptClave.setText("");
+                inptDocumento.setText("");
+                inptFechaNacimiento.setText("");
+                inptNombre.setText("");
+                inptMail.setText("");
+                inptNombre2.setText("");
             } catch (SQLException e) {
                 System.out.println("Ha ocurrido un error en el insert de la persona");
                 e.printStackTrace();

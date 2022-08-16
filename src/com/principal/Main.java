@@ -2,12 +2,9 @@ package com.principal;
 
 import com.formdev.flatlaf.FlatLightLaf;
 import com.proyecto.*;
-import java.awt.Component;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
 
 import javax.swing.UIManager;
 import ui.Login;
@@ -36,18 +33,7 @@ public class Main {
         Funcionalidad fVentas = new Funcionalidad("Ventas", "Registro de ventas", null);
         Funcionalidad fCompras = new Funcionalidad("Compras", "Registro de compras", null);
         Funcionalidad fCuenta = new Funcionalidad("Cuenta corrientes", "Registro de las cuentas corrientes", null);
-        Funcionalidad fSueldos = new Funcionalidad("Sueldos", "Registro de sueldos", null); */ 
-
-    }
-    
-    public static void limpiarCampos(JPanel panel) {
-        Component[] todosLosComponentes = panel.getComponents();
-
-        for (Component componenteActual : todosLosComponentes) {
-            if (componenteActual instanceof JTextField jTextField) {
-                jTextField.setText("");
-            }
-        }
+        Funcionalidad fSueldos = new Funcionalidad("Sueldos", "Registro de sueldos", null); */
     }
 
 }
