@@ -1,7 +1,6 @@
 package com.proyecto;
 
 import java.util.LinkedList;
-import java.util.List;
 
 public class Rol {
 	private String nombre;
