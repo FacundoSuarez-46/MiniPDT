@@ -10,7 +10,7 @@ public class Rol {
 	LinkedList<Persona> personas = new LinkedList<Persona>();
 	LinkedList<Funcionalidad> funcionalidades = new LinkedList<Funcionalidad>();
 
-	public Rol(String nombre, String descripcion, LinkedList<Persona> personas) {
+	public Rol(String nombre, String descripcion, LinkedList<Persona> personas, LinkedList<Funcionalidad> funcionalidades) {
 		super();
 		this.nombre = nombre;
 		this.descripcion = descripcion;
