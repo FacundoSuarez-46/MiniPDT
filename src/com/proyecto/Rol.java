@@ -15,6 +15,7 @@ public class Rol {
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 		this.personas = personas;
+		this.funcionalidades = funcionalidades;
 	}
 
 	public String getNombre() {
