@@ -1,6 +1,6 @@
 package com.proyecto;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Persona {
 
@@ -13,6 +13,20 @@ public class Persona {
 	private String clave;
 	private String email;
 	private Rol rol;
+
+	public Persona(String documento, String apellido1, String apellido2, String nombre1, String nombre2, Date fechanac,
+			String clave, String email, Rol rol) {
+		super();
+		this.documento = documento;
+		this.apellido1 = apellido1;
+		this.apellido2 = apellido2;
+		this.nombre1 = nombre1;
+		this.nombre2 = nombre2;
+		this.fechanac = fechanac;
+		this.clave = clave;
+		this.email = email;
+		this.rol = rol;
+	}
 
 	public String getDocumento() {
 		return documento;

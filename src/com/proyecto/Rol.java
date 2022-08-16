@@ -1,7 +1,6 @@
 package com.proyecto;
 
 import java.util.LinkedList;
-import java.util.List;
 
 public class Rol {
 	private String nombre;
@@ -15,6 +14,7 @@ public class Rol {
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 		this.personas = personas;
+		this.funcionalidades = funcionalidades; //Prueba
 	}
 
 	public String getNombre() {

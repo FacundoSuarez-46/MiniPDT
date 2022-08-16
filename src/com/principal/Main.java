@@ -1,10 +1,10 @@
-package com.proyecto;
+package com.principal;
 
 import com.formdev.flatlaf.FlatLightLaf;
 import javax.swing.UIManager;
 import ui.Login;
 
-public class Principal {
+public class Main {
 
     public static void main(String[] args) {
         try {
@@ -12,7 +12,7 @@ public class Principal {
         } catch (Exception ex) {
             System.err.println("Failed to initialize LaF");
         }
-        
+
         Login login = new Login();
     }
 
