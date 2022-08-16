@@ -14,7 +14,7 @@ public class Rol {
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 		this.personas = personas;
-		this.funcionalidades = funcionalidades;
+		this.funcionalidades = funcionalidades; //Prueba
 	}
 
 	public String getNombre() {
