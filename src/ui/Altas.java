@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 public class Altas extends javax.swing.JFrame {
 
@@ -232,6 +233,8 @@ public class Altas extends javax.swing.JFrame {
                 pst.setInt(9, idRol);
 
                 pst.executeUpdate();
+                
+                JOptionPane.showMessageDialog(null, "Persona creada con éxito");
                 
                 inptApellido.setText("");
                 inptApellido2.setText("");
