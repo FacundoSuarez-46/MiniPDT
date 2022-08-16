@@ -65,6 +65,7 @@ public class Altas extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         comboRol = new javax.swing.JComboBox<>();
+        jButton4 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -73,6 +74,7 @@ public class Altas extends javax.swing.JFrame {
         txtAreaDescripcionRol = new javax.swing.JTextArea();
         jLabel14 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -155,6 +157,14 @@ public class Altas extends javax.swing.JFrame {
 
         jPanel2.add(comboRol, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 332, 160, 30));
 
+        jButton4.setText("Volver");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
+
         jTabbedPane1.addTab("Personas", jPanel2);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -189,6 +199,14 @@ public class Altas extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 370, 40));
+
+        jButton3.setText("Volver");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
 
         jTabbedPane1.addTab("Roles", jPanel1);
 
@@ -302,7 +320,7 @@ public class Altas extends javax.swing.JFrame {
                 pst.executeUpdate();
 
                 JOptionPane.showMessageDialog(null, "Rol creado con éxito");
-                
+
                 inptNombreRol.setText("");
                 txtAreaDescripcionRol.setText("");
             } catch (SQLException e) {
@@ -312,6 +330,16 @@ public class Altas extends javax.swing.JFrame {
         } catch (Exception e) {
         }
     }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        this.dispose();
+        Menu menu = new Menu();
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        this.dispose();
+        Menu menu = new Menu();
+    }//GEN-LAST:event_jButton4MouseClicked
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -358,6 +386,8 @@ public class Altas extends javax.swing.JFrame {
     private javax.swing.JTextField inptNombreRol;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
