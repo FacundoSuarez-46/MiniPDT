@@ -8,6 +8,7 @@ public class Rol {
 	private String descripcion;
 
 	LinkedList<Persona> personas = new LinkedList<Persona>();
+	LinkedList<Funcionalidad> funcionalidades = new LinkedList<Funcionalidad>();
 
 	public Rol(String nombre, String descripcion, LinkedList<Persona> personas) {
 		super();
@@ -39,5 +40,15 @@ public class Rol {
 	public void setPersonas(LinkedList<Persona> personas) {
 		this.personas = personas;
 	}
+
+	public LinkedList<Funcionalidad> getFuncionalidades() {
+		return funcionalidades;
+	}
+
+	public void setFuncionalidades(LinkedList<Funcionalidad> funcionalidades) {
+		this.funcionalidades = funcionalidades;
+	}
+	
+	
 
 }
