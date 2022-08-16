@@ -100,7 +100,9 @@ public class Login extends javax.swing.JFrame {
                 ResultSet rs = pst.executeQuery();
 
                 if (rs.next()) {
-                    System.out.println("Logeado con exito");
+                    this.dispose();
+                    
+                    Menu menu = new Menu();
                 } else {
                     JOptionPane.showMessageDialog(null, "Los datos ingresados son incorrectos.", "Error", JOptionPane.ERROR_MESSAGE);
                 }
