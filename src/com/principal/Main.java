@@ -2,6 +2,7 @@ package com.principal;
 
 import com.formdev.flatlaf.FlatLightLaf;
 import com.proyecto.*;
+import java.text.ParseException;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -11,7 +12,7 @@ import ui.Login;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         try {
             UIManager.setLookAndFeel(new FlatLightLaf());
         } catch (Exception ex) {
