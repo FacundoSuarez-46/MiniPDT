@@ -4,6 +4,7 @@ import connection.ConnectionManager;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import net.proteanit.sql.DbUtils;
 
 public class Listas extends javax.swing.JFrame {
@@ -15,8 +16,9 @@ public class Listas extends javax.swing.JFrame {
         setVisible(true);
         setResizable(false);
         setLocationRelativeTo(null);
-        
+
         cargarPersonas();
+        cargarRoles();
 
     }
 
@@ -30,8 +32,28 @@ public class Listas extends javax.swing.JFrame {
             try {
                 PreparedStatement pst = cn.prepareStatement(sql);
                 ResultSet rs = pst.executeQuery();
-                tabla.setModel(DbUtils.resultSetToTableModel(rs));
-            } catch (Exception e) {
+                tablaPersonas.setModel(DbUtils.resultSetToTableModel(rs));
+            } catch (SQLException e) {
+                System.out.println("Fallo la query de las personas");
+                e.printStackTrace();
+            }
+        } catch (Exception e) {
+        }
+    }
+
+    public void cargarRoles() {
+        try {
+            ConnectionManager cm = new ConnectionManager();
+            Connection cn = cm.connect();
+
+            String sql = "SELECT * FROM ROL";
+            try {
+                PreparedStatement pst = cn.prepareStatement(sql);
+                ResultSet rs = pst.executeQuery();
+                tablaRoles.setModel(DbUtils.resultSetToTableModel(rs));
+            } catch (SQLException e) {
+                System.out.println("Fallo la query de los roles");
+                e.printStackTrace();
             }
         } catch (Exception e) {
         }
@@ -51,7 +73,11 @@ public class Listas extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tabla = new javax.swing.JTable();
+        tablaPersonas = new javax.swing.JTable();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tablaRoles = new javax.swing.JTable();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -67,7 +93,7 @@ public class Listas extends javax.swing.JFrame {
         jLabel1.setText("Lista de personas");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, 20));
 
-        tabla.setModel(new javax.swing.table.DefaultTableModel(
+        tablaPersonas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -78,13 +104,37 @@ public class Listas extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane2.setViewportView(tabla);
+        jScrollPane2.setViewportView(tablaPersonas);
 
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 690, 340));
 
         jScrollPane1.setViewportView(jPanel1);
 
         jTabbedPane1.addTab("Personas", jScrollPane1);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tablaRoles.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(tablaRoles);
+
+        jPanel2.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 690, 340));
+
+        jLabel3.setFont(new java.awt.Font("Poppins SemiBold", 0, 18)); // NOI18N
+        jLabel3.setText("Lista de roles");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, 20));
+
+        jTabbedPane1.addTab("Roles", jPanel2);
 
         getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 520));
 
@@ -128,10 +178,14 @@ public class Listas extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable tabla;
+    private javax.swing.JTable tablaPersonas;
+    private javax.swing.JTable tablaRoles;
     // End of variables declaration//GEN-END:variables
 }
