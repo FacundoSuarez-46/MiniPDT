@@ -2,6 +2,10 @@ package com.principal;
 
 import com.formdev.flatlaf.FlatLightLaf;
 import com.proyecto.*;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.swing.UIManager;
 import ui.Login;
 
@@ -15,6 +19,9 @@ public class Main {
         }
 
         Login login = new Login();
+        
+        String sDate1 = "10/02/1999";
+        Date date1 = new SimpleDateFormat("dd/MM/yyyy").parse(sDate1);
         
         Persona p1 = new Persona("5000111-2", "Perez", "Silva", "Juan", "Pedro", date1,"111222hola", "prueba1@utec.com", null);
 		
